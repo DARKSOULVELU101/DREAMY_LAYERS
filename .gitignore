@@ -1,7 +1,7 @@
 node_modules/
 backend/node_modules/
-backend/orders.xlsx
 .env
 *.log
 .DS_Store
 PHOTO/
+.DS_Store

@@ -126,11 +126,6 @@
     const submitBtn = document.getElementById('submitBtn');
     const feedback = document.getElementById('formFeedback');
 
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-    feedback.className = 'form-feedback';
-    feedback.style.display = 'none';
-
     const formData = {
       customerName: document.getElementById('customerName').value,
       contactNo: document.getElementById('contactNo').value,
@@ -145,44 +140,98 @@
       messageOnCake: document.getElementById('messageOnCake').value
     };
 
+    const category = formData.cakeCategory;
+    const weight = parseFloat(formData.weight) || 0;
+    const quantity = parseInt(formData.quantity) || 1;
+    const customizationText = formData.customization.trim();
+    const kidsDiscount = document.getElementById('kidsDiscount').checked;
+
+    let baseRate = 0;
+    if (category === 'normal') baseRate = 450;
+    else if (category === 'special') baseRate = 700;
+    else if (category === 'ice') baseRate = 900;
+
+    let total = baseRate * weight * quantity;
+    if (customizationText && category !== 'normal') total += 200 * quantity;
+    if (kidsDiscount) total *= 0.85;
+    total = Math.round(total);
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+    feedback.className = 'form-feedback';
+    feedback.style.display = 'none';
+
+    const orderDetails = [
+      `🍰 *New Order - DREAMY_LAYERS*`,
+      ``,
+      `*Name:* ${formData.customerName}`,
+      `*Contact:* ${formData.contactNo}`,
+      `*Email:* ${formData.email || 'N/A'}`,
+      `*Address:* ${formData.deliveryAddress}`,
+      `*Cake Type:* ${formData.cakeType}`,
+      `*Category:* ${formData.cakeCategory}`,
+      `*Weight:* ${formData.weight} kg`,
+      `*Quantity:* ${formData.quantity}`,
+      `*Delivery Date:* ${formData.deliveryDate}`,
+      `*Message on Cake:* ${formData.messageOnCake || 'None'}`,
+      `*Customization:* ${customizationText || 'None'}`,
+      `*Kids Discount:* ${kidsDiscount ? 'Yes (15% off)' : 'No'}`,
+      `*Total:* ₹${total}`,
+    ].join('\n');
+
+    const whatsappUrl = `https://wa.me/919750147143?text=${encodeURIComponent(orderDetails)}`;
+
+    // Try API to store order in Excel (record keeping)
+    let orderSuccess = false;
+    let orderId = '';
+
     try {
       const response = await fetch('/api/place-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-
       const result = await response.json();
-
       if (result.success) {
-        feedback.className = 'form-feedback success';
-        feedback.style.display = 'block';
-        feedback.innerHTML = `
-          <h4><i class="fas fa-check-circle"></i> Order Placed Successfully!</h4>
-          <p>Order ID: <strong>${result.orderId}</strong></p>
-          <p>Total Amount: <strong>₹${result.totalPrice}</strong></p>
-          <p>We will contact you shortly to confirm your order.</p>
-          <div style="margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a href="${result.whatsappUrl}" target="_blank" class="btn" style="background:#25D366;color:#fff;padding:10px 20px;border-radius:50px;text-decoration:none;font-size:14px;">
-              <i class="fab fa-whatsapp"></i> View on WhatsApp
-            </a>
-          </div>
-        `;
-        this.reset();
-        calculatePrice();
-        setTimeout(() => {
-          if (result.whatsappUrl) window.open(result.whatsappUrl, '_blank');
-        }, 500);
-      } else {
-        feedback.className = 'form-feedback error';
-        feedback.style.display = 'block';
-        feedback.innerHTML = `<p><i class="fas fa-exclamation-circle"></i> ${result.message}</p>`;
+        orderSuccess = true;
+        orderId = result.orderId;
       }
-    } catch (error) {
-      feedback.className = 'form-feedback error';
-      feedback.style.display = 'block';
-      feedback.innerHTML = '<p><i class="fas fa-exclamation-circle"></i> Network error. Please try again.</p>';
+    } catch (apiError) {
+      console.log('API unavailable, using WhatsApp only');
     }
+
+    feedback.className = 'form-feedback success';
+    feedback.style.display = 'block';
+
+    if (orderSuccess) {
+      feedback.innerHTML = `
+        <h4><i class="fas fa-check-circle"></i> Order Placed Successfully!</h4>
+        <p>Order ID: <strong>${orderId}</strong></p>
+        <p>Total: <strong>₹${total}</strong></p>
+        <p>Click below to send via WhatsApp for instant confirmation:</p>
+        <div style="margin-top:15px;">
+          <a href="${whatsappUrl}" target="_blank" class="btn" style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-size:14px;font-weight:600;display:inline-block;">
+            <i class="fab fa-whatsapp"></i> Send to WhatsApp
+          </a>
+        </div>
+      `;
+    } else {
+      feedback.innerHTML = `
+        <h4><i class="fas fa-check-circle"></i> Order Ready!</h4>
+        <p>Please click below to send your order via WhatsApp:</p>
+        <div style="margin-top:15px;">
+          <a href="${whatsappUrl}" target="_blank" class="btn" style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-size:14px;font-weight:600;display:inline-block;">
+            <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+          </a>
+        </div>
+        <p style="margin-top:10px;font-size:13px;color:#888;">Note: Our order system is being updated. Your order will be processed via WhatsApp.</p>
+      `;
+    }
+
+    window.open(whatsappUrl, '_blank');
+
+    this.reset();
+    calculatePrice();
 
     submitBtn.disabled = false;
     submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Place Order';

@@ -1,0 +1,10 @@
+{
+  "name": "dreamy-layers",
+  "version": "1.0.0",
+  "description": "DREAMY_LAYERS - Premium Cake Shop",
+  "private": true,
+  "dependencies": {
+    "@vercel/blob": "^1.0.0",
+    "xlsx": "^0.18.5"
+  }
+}
