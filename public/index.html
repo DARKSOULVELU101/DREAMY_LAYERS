@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DREAMY_LAYERS - Premium Cake Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="loader"></div>
+    <p>DREAMY_LAYERS</p>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <i class="fas fa-birthday-cake"></i>
+        <span>DREAMY_LAYERS</span>
+      </a>
+      <div class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#cakes" class="nav-link">Cakes</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#offers" class="nav-link">Offers</a></li>
+        <li><a href="#order" class="nav-link order-nav-btn">Order Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Premium Cake Shop</div>
+      <h1 class="hero-title">DREAMY_LAYERS</h1>
+      <p class="hero-subtitle">Crafting Sweet Memories, One Layer at a Time</p>
+      <p class="hero-desc">Freshly baked cakes made with love. Order your dream cake today!</p>
+      <div class="hero-buttons">
+        <a href="#order" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Order Now</a>
+        <a href="#cakes" class="btn btn-secondary"><i class="fas fa-eye"></i> Explore Cakes</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">100+</span><span>Cake Varieties</span></div>
+        <div class="stat"><span class="stat-num">500+</span><span>Happy Customers</span></div>
+        <div class="stat"><span class="stat-num">24/7</span><span>Support</span></div>
+        <div class="stat"><span class="stat-num">5-6hrs</span><span>Customization</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Us</span>
+        <h2>Welcome to DREAMY_LAYERS</h2>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>DREAMY_LAYERS is a premium cake shop based in Vellore, dedicated to crafting delicious and beautiful cakes for every occasion. From birthdays to weddings, we bring your sweetest dreams to life with our expert baking and creative designs.</p>
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Our Location</h4>
+                <p>Mailpatti (Village & Post), Paranambut-TK,<br>Vellore-635805</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Call Us</h4>
+                <p><a href="tel:9750147143">+91 9750147143</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email Us</h4>
+                <p><a href="mailto:babusoniya773@gmail.com">babusoniya773@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="DREAMY_LAYERS Cake Shop">
+          <div class="about-experience">
+            <span class="exp-num">5+</span>
+            <span>Years of Baking Excellence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cakes section" id="cakes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Collection</span>
+        <h2>Explore Our Cake Varieties</h2>
+        <p>From classic flavors to custom creations, find the perfect cake for every moment</p>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="cakes-grid">
+        <div class="cake-card" data-cake="birthday">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=400&q=80" alt="Birthday Cake">
+            <div class="cake-tag">Popular</div>
+          </div>
+          <div class="cake-info">
+            <h3>Birthday Cakes</h3>
+            <p>Celebrate with our specially designed birthday cakes</p>
+            <span class="cake-price">From ₹450/kg</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="wedding">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=400&q=80" alt="Wedding Cake">
+            <div class="cake-tag">Premium</div>
+          </div>
+          <div class="cake-info">
+            <h3>Wedding & Anniversary</h3>
+            <p>Elegant multi-tier cakes for your special day</p>
+            <span class="cake-price">Custom Pricing</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="mango">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80" alt="Mango Chocolate Cake">
+          </div>
+          <div class="cake-info">
+            <h3>Mango Chocolate</h3>
+            <p>Rich chocolate blended with fresh mango goodness</p>
+            <span class="cake-price">From ₹550/kg</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="fruit">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=80" alt="Fruit Cake">
+          </div>
+          <div class="cake-info">
+            <h3>Fruit Cakes</h3>
+            <p>Loaded with fresh fruits and creamy layers</p>
+            <span class="cake-price">From ₹500/kg</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="new-arrivals">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=80" alt="New Arrival">
+            <div class="cake-tag">New</div>
+          </div>
+          <div class="cake-info">
+            <h3>New Arrivals</h3>
+            <p>Try our latest creations and seasonal specials</p>
+            <span class="cake-price">From ₹480/kg</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="dry">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a2e?w=400&q=80" alt="Dry Cake">
+          </div>
+          <div class="cake-info">
+            <h3>Dry Cakes</h3>
+            <p>Traditional dry cakes with rich authentic flavors</p>
+            <span class="cake-price">From ₹400/kg</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="combo">
+          <div class="cake-img">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80" alt="Cake Combo">
+          </div>
+          <div class="cake-info">
+            <h3>Cake Combos</h3>
+            <p>Perfect combos with cakes and treats</p>
+            <span class="cake-price">From ₹699</span>
+          </div>
+        </div>
+        <div class="cake-card" data-cake="custom">
+          <div class="cake-img custom-img">
+            <div class="custom-overlay">
+              <i class="fas fa-paint-brush"></i>
+              <h3>Customize Your Cake</h3>
+              <p>5-6 hrs delivery</p>
+            </div>
+          </div>
+          <div class="cake-info">
+            <h3>Custom Cakes</h3>
+            <p>Design your own cake with our expert bakers</p>
+            <span class="cake-price">₹200 + Cake Price</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pricing</span>
+        <h2>Affordable & Transparent Pricing</h2>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>Normal Cakes</h3>
+          </div>
+          <div class="pricing-body">
+            <div class="price">₹<span>450</span></div>
+            <p class="price-label">Starting from / 1kg</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Classic flavors</li>
+              <li><i class="fas fa-check"></i> Standard design</li>
+              <li><i class="fas fa-check"></i> 30km delivery range</li>
+              <li><i class="fas fa-check"></i> Freshly baked</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-header">
+            <i class="fas fa-star"></i>
+            <h3>Special Cakes</h3>
+            <div class="featured-badge">Most Popular</div>
+          </div>
+          <div class="pricing-body">
+            <div class="price">₹<span>700</span> - ₹<span>1,500</span></div>
+            <p class="price-label">Customizable / 1kg</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Premium ingredients</li>
+              <li><i class="fas fa-check"></i> Custom designs</li>
+              <li><i class="fas fa-check"></i> Themed decorations</li>
+              <li><i class="fas fa-check"></i> 15km delivery range</li>
+              <li><i class="fas fa-check"></i> ₹200 customization charge</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <i class="fas fa-snowflake"></i>
+            <h3>Ice Cakes</h3>
+          </div>
+          <div class="pricing-body">
+            <div class="price">₹<span>900</span></div>
+            <p class="price-label">Starting from / 1kg</p>
+            <ul>
+              <li><i class="fas fa-check"></i> Ice cream cakes</li>
+              <li><i class="fas fa-check"></i> Premium toppings</li>
+              <li><i class="fas fa-check"></i> 15km delivery range</li>
+              <li><i class="fas fa-check"></i> Special packaging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-truck"></i></div>
+          <h3>Free Delivery</h3>
+          <p>Free delivery within 5km radius. Normal cakes up to 30km, ice cakes up to 15km.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clock"></i></div>
+          <h3>Quick Customization</h3>
+          <p>Get your custom cake ready in just 5-6 hours! Perfect for last-minute celebrations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <h3>24/7 Customer Support</h3>
+          <p>We're here round the clock to help you with orders, queries, and customizations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-gift"></i></div>
+          <h3>Kids Discount</h3>
+          <p>10-15% discount on birthday cakes for children below 5 years. Celebrate your little one!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers section" id="offers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Offers</span>
+        <h2>Special Offers & Discounts</h2>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fas fa-child"></i></div>
+          <div class="offer-content">
+            <h3>Kids Birthday Special</h3>
+            <p>Children below 5 years get <strong>10-15% discount</strong> on birthday cakes. Make your little one's day extra special!</p>
+            <span class="offer-tag">Use Code: KIDS15</span>
+          </div>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fas fa-paint-brush"></i></div>
+          <div class="offer-content">
+            <h3>Customization Offer</h3>
+            <p>Customize your dream cake for just <strong>₹200 extra</strong> charges. Get it delivered in 5-6 hours!</p>
+            <span class="offer-tag">Express Customization</span>
+          </div>
+        </div>
+        <div class="offer-card">
+          <div class="offer-icon"><i class="fas fa-shipping-fast"></i></div>
+          <div class="offer-content">
+            <h3>Free Delivery Zone</h3>
+            <p><strong>Free delivery</strong> within 5km radius. Normal cakes delivered up to 30km range.</p>
+            <span class="offer-tag">No Delivery Fee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery-info section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Delivery</span>
+        <h2>Delivery Information</h2>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="delivery-grid">
+        <div class="delivery-card">
+          <div class="delivery-range">5 km</div>
+          <h3>Free Delivery</h3>
+          <p>Free delivery for all orders within 5km radius from our location.</p>
+          <i class="fas fa-check-circle delivery-icon"></i>
+        </div>
+        <div class="delivery-card">
+          <div class="delivery-range">30 km</div>
+          <h3>Normal Cakes</h3>
+          <p>Delivery available up to 30km range for normal cakes.</p>
+          <i class="fas fa-truck delivery-icon"></i>
+        </div>
+        <div class="delivery-card">
+          <div class="delivery-range">15 km</div>
+          <h3>Ice & Special Cakes</h3>
+          <p>Special ice cakes delivered within 15km to maintain freshness.</p>
+          <i class="fas fa-snowflake delivery-icon"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Happy Customers</span>
+        <h2>What Our Customers Say</h2>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="slider-container" id="sliderContainer"></div>
+        <div class="slider-nav">
+          <button class="slider-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order section" id="order">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Order Now</span>
+        <h2>Place Your Cake Order</h2>
+        <p>Fill in the details and we'll get back to you within minutes!</p>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="order-wrapper">
+        <div class="order-form-container">
+          <form id="orderForm" class="order-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customerName"><i class="fas fa-user"></i> Full Name *</label>
+                <input type="text" id="customerName" name="customerName" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="contactNo"><i class="fas fa-phone"></i> Contact Number *</label>
+                <input type="tel" id="contactNo" name="contactNo" placeholder="Enter phone number" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email (Optional)</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address">
+              </div>
+              <div class="form-group">
+                <label for="deliveryDate"><i class="fas fa-calendar"></i> Delivery Date *</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="deliveryAddress"><i class="fas fa-map-marker-alt"></i> Delivery Address *</label>
+              <textarea id="deliveryAddress" name="deliveryAddress" rows="3" placeholder="Enter complete delivery address" required></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cakeType"><i class="fas fa-birthday-cake"></i> Cake Type *</label>
+                <select id="cakeType" name="cakeType" required>
+                  <option value="">Select Cake Type</option>
+                  <option value="Birthday">Birthday Cake</option>
+                  <option value="Wedding">Wedding Cake</option>
+                  <option value="Anniversary">Anniversary Cake</option>
+                  <option value="Mango Chocolate">Mango Chocolate</option>
+                  <option value="Fruit Cake">Fruit Cake</option>
+                  <option value="New Arrival">New Arrival</option>
+                  <option value="Dry Cake">Dry Cake</option>
+                  <option value="Cake Combo">Cake Combo</option>
+                  <option value="Custom">Custom Design</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cakeCategory"><i class="fas fa-tag"></i> Cake Category *</label>
+                <select id="cakeCategory" name="cakeCategory" required>
+                  <option value="">Select Category</option>
+                  <option value="normal">Normal Cake</option>
+                  <option value="special">Special Cake (Customizable)</option>
+                  <option value="ice">Ice Cake</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="weight"><i class="fas fa-weight"></i> Weight (kg) *</label>
+                <select id="weight" name="weight" required>
+                  <option value="">Select Weight</option>
+                  <option value="0.5">0.5 kg</option>
+                  <option value="1">1 kg</option>
+                  <option value="2">2 kg</option>
+                  <option value="3">3 kg</option>
+                  <option value="5">5 kg</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="quantity"><i class="fas fa-sort-amount-up"></i> Quantity *</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="messageOnCake"><i class="fas fa-pen"></i> Message on Cake</label>
+              <input type="text" id="messageOnCake" name="messageOnCake" placeholder="Write a message on the cake">
+            </div>
+            <div class="form-group">
+              <label for="customization"><i class="fas fa-paint-brush"></i> Customization Details (₹200 extra)</label>
+              <textarea id="customization" name="customization" rows="3" placeholder="Describe your custom design, theme, color, flavor preferences..."></textarea>
+            </div>
+            <div class="form-group kids-discount">
+              <label class="checkbox-label">
+                <input type="checkbox" id="kidsDiscount" name="kidsDiscount">
+                <span class="checkmark"></span>
+                Apply 10-15% Kids Birthday Discount (for children below 5 years)
+              </label>
+            </div>
+            <div class="form-total" id="pricePreview">
+              <div class="total-row">
+                <span>Estimated Total:</span>
+                <span class="total-amount" id="totalAmount">₹0</span>
+              </div>
+              <small>* Final price may vary based on customization</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Place Order
+            </button>
+            <div id="formFeedback" class="form-feedback"></div>
+          </form>
+        </div>
+        <div class="order-info">
+          <div class="info-card">
+            <h3><i class="fas fa-info-circle"></i> Why Order From Us?</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Freshly baked premium cakes</li>
+              <li><i class="fas fa-check-circle"></i> 5-6 hours quick customization</li>
+              <li><i class="fas fa-check-circle"></i> Free delivery within 5km</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+              <li><i class="fas fa-check-circle"></i> Order via WhatsApp & Email</li>
+              <li><i class="fas fa-check-circle"></i> Kids discount available</li>
+            </ul>
+          </div>
+          <div class="info-card support-card">
+            <h3><i class="fas fa-headset"></i> 24/7 Customer Support</h3>
+            <div class="support-links">
+              <a href="tel:9750147143" class="support-btn"><i class="fas fa-phone"></i> Call Now</a>
+              <a href="https://wa.me/919750147143" target="_blank" class="support-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:babusoniya773@gmail.com" class="support-btn email"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Contact</span>
+        <h2>Get In Touch</h2>
+        <div class="divider"><i class="fas fa-birthday-cake"></i></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>Mailpatti (Village & Post), Paranambut-TK, Vellore-635805</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:9750147143">+91 9750147143</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:babusoniya773@gmail.com">babusoniya773@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Mon - Sun: 6:00 AM - 10:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.5!2d78.7!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA3OMKwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-birthday-cake"></i>
+            <span>DREAMY_LAYERS</span>
+          </div>
+          <p>Crafting sweet memories, one layer at a time. Premium cakes for every occasion.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/919750147143" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:babusoniya773@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:9750147143"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cakes">Our Cakes</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#order">Order Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Our Cakes</h4>
+          <ul>
+            <li><a href="#cakes">Birthday Cakes</a></li>
+            <li><a href="#cakes">Wedding Cakes</a></li>
+            <li><a href="#cakes">Fruit Cakes</a></li>
+            <li><a href="#cakes">Chocolate Cakes</a></li>
+            <li><a href="#cakes">Custom Cakes</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> Mailpatti, Vellore-635805</li>
+            <li><i class="fas fa-phone"></i> +91 9750147143</li>
+            <li><i class="fas fa-envelope"></i> babusoniya773@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DREAMY_LAYERS. All rights reserved. | Designed with <i class="fas fa-heart"></i> for cake lovers</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919750147143" target="_blank" class="whatsapp-float" title="Order via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
